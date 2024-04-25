@@ -3,8 +3,11 @@
     "express": "^4.19.2",
     "mongodb": "^6.5.0"
 
+  
+  }
     "scripts": {
       "start": "node part2.js"
     }
-  }
+
+  "homepage": "https://sydneythompson-70e505a8ebc3.herokuapp.com/"
 }
