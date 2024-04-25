@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            margin-left: 10px;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        /* Style for radio buttons */
+        input[type="radio"] {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        /* Style for labels */
+        label {
+            display: inline-block;
+            margin-left: 10px; /* Adjust as needed */
+            vertical-align: middle;
+        }
+
+        input[type="text"], button {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Clearfix for form */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Form</h1>
+    <h2>Enter the stock ticker or the company name:</h2>
+    <form action="/process" method="GET" class="clearfix">
+        <input type="text" name="query"  required>
+        <br>
+        <input type="radio" id="ticker" name="searchType" value="ticker">
+        <label for="ticker">Search by Ticker Symbol</label>
+        <br>
+        <input type="radio" id="company" name="searchType" value="company">
+        <label for="company">Search by Company Name</label>
+        <br>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
+
